@@ -1,4 +1,4 @@
 package pl.drogaprogramisty.srp.srp_correct;
 
-public record CompanyProfit(int income, int expenses, int profit) {
+public record CompanyProfit(double income, double expenses, double profit) {
 }
