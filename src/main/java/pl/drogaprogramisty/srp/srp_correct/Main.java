@@ -10,7 +10,8 @@ public class Main {
                 new Employee("Karolina", 5000, 4000)
         );
         MailSender mailSender = new MailSender();
-        CompanyProfitCalculator companyProfitCalculator = new CompanyProfitCalculator();
+        EmployeeSalaryCalculator employeeSalaryCalculator = new EmployeeSalaryCalculator();
+        CompanyProfitCalculator companyProfitCalculator = new CompanyProfitCalculator(employeeSalaryCalculator);
 
         CompanyProfit profit = companyProfitCalculator.calculate(employees);
         mailSender.sendMail(profit, "drogaprogramisty@gmail.com");
