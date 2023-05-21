@@ -12,5 +12,14 @@ public class Main {
         CommentValidator commentValidator = new CommentValidator(rules);
 
         commentValidator.validate("Dobre praktyki podupadają.");
+
+
+        List<CommentValidatorRule> communityRules = List.of(
+                new MaxLengthRule(200),
+                new ForbiddenWordsRule(List.of("dupa", "words", "forbidden", "for", "community"))
+        );
+        CommentValidator communityCommentValidator = new CommentValidator(communityRules);
+        communityCommentValidator.validate("Dobre praktyki podupadają.");
+
     }
 }
