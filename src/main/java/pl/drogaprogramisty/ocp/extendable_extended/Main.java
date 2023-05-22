@@ -16,7 +16,8 @@ public class Main {
 
         List<CommentValidatorRule> communityRules = List.of(
                 new MaxLengthRule(200),
-                new ForbiddenWordsRule(List.of("dupa", "words", "forbidden", "for", "community"))
+                new ForbiddenWordsRule(List.of("dupa", "words", "forbidden", "for", "community")),
+                new MalpaCannotBeThereInCommentValidatorRule()
         );
         CommentValidator communityCommentValidator = new CommentValidator(communityRules);
         communityCommentValidator.validate("Dobre praktyki podupadają.");
