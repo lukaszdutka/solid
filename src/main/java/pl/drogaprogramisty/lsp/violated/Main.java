@@ -7,10 +7,9 @@ public class Main {
         bankAccount.withdraw(10);
         System.out.println(bankAccount.getBalance());
 
-        BankAccount bankAccount2 = new FixedTermDepositAccount(100, 0.07);
+        BankAccount bankAccount2
+                = new FixedTermDepositAccount(100, 0.07);
         System.out.println(bankAccount2.getBalance());
-        bankAccount2.withdraw(10);
-        System.out.println(bankAccount2.getBalance());
-
+        bankAccount2.withdraw(10); //exception
     }
 }
