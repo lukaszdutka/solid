@@ -11,6 +11,6 @@ public class Main {
         );
         CommentValidator commentValidator = new CommentValidator(rules);
 
-        commentValidator.validate("Dobre praktyki podupadają.");
+        System.out.println(commentValidator.validate("Dobre praktyki podupadają."));
     }
 }

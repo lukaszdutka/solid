@@ -4,6 +4,13 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        //LSP - Liskov Substitution Principle
+        // Barbara Liskov.
+        // parent - child
+        // Bird - Pelikan (lata)
+        // Bird -> Pingwin (nie lata)
+
+
         BankAccount bankAccount = new BankAccount(100);
         System.out.println(bankAccount.getBalance());
         bankAccount.withdraw(10);
